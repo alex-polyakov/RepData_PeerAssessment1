@@ -12,6 +12,11 @@ output:
 1. Download and unzip the dataset
 
 ```{r}
+#make code visible
+echo = TRUE
+#set up directory for graphs
+knitr::opts_chunk$set(fig.path='figure/')
+
 fileUrl <- "http://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
 destFile <- "repdata_data_activity.zip"
 download.file(fileUrl, destFile, method = "auto", quiet = T)

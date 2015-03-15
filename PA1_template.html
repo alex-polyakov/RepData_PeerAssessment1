@@ -60,7 +60,12 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <ol style="list-style-type: decimal">
 <li>Download and unzip the dataset</li>
 </ol>
-<pre class="r"><code>fileUrl &lt;- &quot;http://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip&quot;
+<pre class="r"><code>#make code visible
+echo = TRUE
+#set up directory for graphs
+knitr::opts_chunk$set(fig.path='figure/')
+
+fileUrl &lt;- &quot;http://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip&quot;
 destFile &lt;- &quot;repdata_data_activity.zip&quot;
 download.file(fileUrl, destFile, method = &quot;auto&quot;, quiet = T)
 unzip(destFile)</code></pre>

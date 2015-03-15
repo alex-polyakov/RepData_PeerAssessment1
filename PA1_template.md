@@ -8,6 +8,11 @@
 
 
 ```r
+#make code visible
+echo = TRUE
+#set up directory for graphs
+knitr::opts_chunk$set(fig.path='figure/')
+
 fileUrl <- "http://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
 destFile <- "repdata_data_activity.zip"
 download.file(fileUrl, destFile, method = "auto", quiet = T)
@@ -44,7 +49,7 @@ hist(stepsPerDay$steps,
      )
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
+![](figure/unnamed-chunk-4-1.png) 
 
 3. Calculate and report the mean and median of the total number of steps taken per day
 
@@ -87,7 +92,7 @@ plot(stepsByInterval$interval, stepsByInterval$steps,
      )
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png) 
+![](figure/unnamed-chunk-7-1.png) 
 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -141,7 +146,7 @@ hist(imputedStepsPerDay$steps,
      )
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-11-1.png) 
+![](figure/unnamed-chunk-11-1.png) 
 
 Mean of the imputed number of steps taken per day:
 
@@ -198,4 +203,4 @@ with(avgSteps,
             )
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-15-1.png) 
+![](figure/unnamed-chunk-15-1.png) 
